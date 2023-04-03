@@ -1,0 +1,65 @@
+\documentclass[a4paper]{exam}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{array}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{titling}
+\usepackage{graphicx}
+\usepackage{float}
+
+\graphicspath{{Images}}
+
+\newcolumntype{C}{>{$}c<{$}} % math-mode version of "c" column type
+
+\runningheader{CS/MATH 113}{WC13: Proof by Induction}{\theauthor}
+\runningheadrule
+\runningfootrule
+\runningfooter{}{Page \thepage\ of \numpages}{}
+
+\printanswers
+
+\title{Weekly Challenge 13: Proof by Induction\\CS/MATH 113 Discrete Mathematics}
+\author{team-name}  % <== for grading, replace with your team name, e.g. q1-team-420
+\date{Habib University | Spring 2023}
+
+\qformat{{\large\bf \thequestion. \thequestiontitle}\hfill}
+\boxedpoints
+
+\begin{document}
+\maketitle
+
+\begin{questions}
+
+  \titledquestion{Pyramid Scheme}[5]
+  Suppose we have circular coins (alot of them!) all of same dimension and we were to make a hexagonal pyramid out of them as follows. The top layer has $1$ coin. The second layer has $7$ coins arranged in a hexagon with side length of two coins (see picture below). The third layer has $19$ coins in a hexagon with side length of three coins, and so on. Prove that a pyramid created so constituting $n$ layers requires in total $n^3$ coins.
+  \begin{figure}[h!]
+    \centerline{\includegraphics{layer1.png}}
+    \caption{Top layer as seen from above.}
+    \label{layer1}
+  \end{figure}
+  \begin{figure}[h!]
+    \centerline{\includegraphics{layer2.png}}
+    \caption{The second layer as seen from above. Note that this layer has $7$ coins and forms a hexagon with side length of two coins.}
+    \label{layer2}
+  \end{figure}
+  \newpage
+  \begin{figure}[h!]
+    \centerline{\includegraphics{layer3.png}}
+    \caption{The third layer with $19$ coins forming a hexagon with side length of three coins.}
+    \label{layer3}
+  \end{figure}
+  
+  \begin{solution}
+    % Enter your solution here.
+  \end{solution}
+
+  Note: All figures are taken from beckykwarren's geogebra \href{https://www.geogebra.org/m/cnqdjcph}{page.}
+
+\end{questions}
+
+
+\end{document}
+
+
