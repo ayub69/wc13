@@ -6,7 +6,7 @@ Weekly challenges (WC) invite you to critically engage with the topics covered u
 
 # Purpose
 
-This WC requires you to explore some results about set carnality in order to argue about the size of an infinite matrix.
+This WC requires you to explore proof via induction.
 
 You may need to spend a good amount of time thinking about the problems and it is unlikely that you will arrive at a solution in a single sitting. Start discussing the problem with your buddy early.
 
