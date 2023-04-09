@@ -1,0 +1,99 @@
+\documentclass[a4paper]{exam}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{array}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{titling}
+\usepackage{graphicx}
+\usepackage{float}
+
+\graphicspath{{images/}}
+
+\newcolumntype{C}{>{$}c<{$}} % math-mode version of "c" column type
+
+\runningheader{CS/MATH 113}{WC13: Proof by Induction}{\theauthor}
+\runningheadrule
+\runningfootrule
+\runningfooter{}{Page \thepage\ of \numpages}{}
+
+\printanswers
+
+\title{Weekly Challenge 13: Proof by Induction\\CS/MATH 113 Discrete Mathematics}
+\author{team-name}  % <== for grading, replace with your team name, e.g. q1-team-420
+\date{Habib University | Spring 2023}
+
+\qformat{{\large\bf \thequestion. \thequestiontitle}\hfill}
+\boxedpoints
+
+\begin{document}
+\maketitle
+
+\begin{questions}
+
+  \titledquestion{Pyramid Scheme}[5]
+  Suppose we have circular coins (alot of them!) all of same dimension and we were to make a hexagonal pyramid out of them as follows. The top layer has $1$ coin. The second layer has $7$ coins arranged in a hexagon with side length of two coins (see picture below). The third layer has $19$ coins in a hexagon with side length of three coins, and so on. Prove that a pyramid created so constituting $n$ layers requires in total $n^3$ coins.
+  \begin{figure}[h!]
+    \centerline{\includegraphics{layer1.png}}
+    \caption{Top layer as seen from above.}
+    \label{layer1}
+  \end{figure}
+  \begin{figure}[h!]
+    \centerline{\includegraphics{layer2.png}}
+    \caption{The second layer as seen from above. Note that this layer has $7$ coins and forms a hexagon with side length of two coins.}
+    \label{layer2}
+  \end{figure}
+  \newpage
+  \begin{figure}[h!]
+    \centerline{\includegraphics{layer3.png}}
+    \caption{The third layer with $19$ coins forming a hexagon with side length of three coins.}
+    \label{layer3}
+  \end{figure}
+  
+  \begin{solution}
+     a formula which tells us coins per layer will be made. 
+    \\ the fourth layer will have 37 coins(using $n^3$. $4^3$-$3^3$= 64 - 27 , which gives 37.
+    \\ looking at the pattern 
+    \\t1=1
+    \\t2=1+6
+    \\t3=1+6+12
+    \\t4= 1+6+12+18
+    \\tn=1+6+...(n-1)
+    \\ taking 6 common and 1 will be base case
+    \\ 1+6(1+2..(n-1))
+    \\1+6(n-1)(n/2)
+    \\1+3n(n-1)
+    \\
+    \textbf{to prove}: p(n) = $n^3$ for all $n \geq 1$, let p(n) br the total number of coins in a pyramid with $n$ layers.
+    \\ \textbf{proving base case:}
+    \\ $1^3$=1
+    \\p(1)=1
+    \\ \textbf{inductive step}
+    \\let p(k) be true, p(k)=$k^3$
+    \\ p(k+1)=$(k+1)^3$
+    \\ after expanding:
+    \\ $k^3$+$3k^2$+3k+1
+    \\ p(k) +$3k^2$+3k+1 (substitution)
+\\ since p(k+1)= p(k) +$3k^2$+3k+1 for all natural numbers k
+\\ By  mathematical induction, $k^3$ is true for all natural numbers k where p(1)= 1 is true for all natural numbers k.
+
+
+
+
+    
+  \end{solution}
+
+  Note: All figures are taken from beckykwarren's geogebra \href{https://www.geogebra.org/m/cnqdjcph}{page.}
+
+\end{questions}
+
+
+\end{document}
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
